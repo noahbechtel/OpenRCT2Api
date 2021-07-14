@@ -1,7 +1,7 @@
 # Restful OpenRCT2 API Host
       Using Node.js and the plugin API created by the OpenRCT2 team, OpenRCT2 Restful Api tracks game stats,
-      and updates them after each in-game day.
-     
+      and updates them after each in-game day. 
+# View Data live [here](https://www.openrct2api.com/)  
 # Setup
 Install the api.js plugin like any other by moving it to 
 ```bash
