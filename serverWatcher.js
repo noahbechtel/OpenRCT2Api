@@ -8,8 +8,8 @@ let args = process.argv.slice(2)
 console.log(args);
 
 args.map((e, i) => {
-    if (e == "-apiToken") apiToken = args[i + 1]
-    if (e == "-p") public = false
+    if (e === "-apiToken") apiToken = args[i + 1]
+    if (e === "-p") public = false
 })
 
 if (!apiToken || apiToken.length > 22) {
