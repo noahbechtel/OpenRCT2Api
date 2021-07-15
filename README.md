@@ -6,7 +6,7 @@ and updates them after each in-game day.
 
 Get an api key from [here](https://openRCT2API.com/setup)
 
-##Local vs Remote
+## Local vs Remote
 If you're hosting a server, use apiHost.js, else use apiLocal.js
 
 Install the plugin like any other by moving it to 
