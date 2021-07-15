@@ -6,13 +6,16 @@ and updates them after each in-game day.
 
 Get an api key from [here](https://openRCT2API.com/setup)
 
-Install the api.js plugin like any other by moving it to 
+##Local vs Remote
+If you're hosting a server, use apiHost.js, else use apiLocal.js
+
+Install the plugin like any other by moving it to 
 ```bash
-/OpenRCT2/plugin
+/OpenRCT2/plugin/
 ```
 Making sure you have Nodejs installed, start the middleware with
 ```bash
-node serverWatcher.js -apitoken <YOUR API TOKEN>
+node <path to file>/serverWatcher.js -apitoken <YOUR API TOKEN>
 ```
 optionally, you can add -p to disallow the data from being displayed on the live view on the site.
 before starting OpenRCT2.
@@ -22,13 +25,13 @@ That's it.
 ## Getting Your Park
 Get a park by name with a simple GET request:
 ```bash
- GET: /api/parks/:parkName
+ GET: /api/parks/:apiToken
 ```     
       
 ## Getting All Parks
 Get a JSON object of all saved parks:
 ```js
-GET: /api/parks/:parkName
+GET: /api/parks/:apiToken
 ```
 
 ## Posting a Park
