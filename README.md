@@ -3,16 +3,20 @@ Using Node.js and the plugin API created by the OpenRCT2 team, OpenRCT2 Restful 
 and updates them after each in-game day. 
 ### View Data live [here](https://www.openrct2api.com/)  
 ## Setup
+
+Get an api key from [here](https://openRCT2API.com/setup)
+
 Install the api.js plugin like any other by moving it to 
 ```bash
 /OpenRCT2/plugin
 ```
 Making sure you have Nodejs installed, start the middleware with
 ```bash
-node serverWatcher.js
+node serverWatcher.js -apitoken <YOUR API TOKEN>
 ```
+optionally, you can add -p to disallow the data from being displayed on the live view on the site.
 before starting OpenRCT2.
-      That's it.
+That's it.
 # Usage
 
 ## Getting Your Park
