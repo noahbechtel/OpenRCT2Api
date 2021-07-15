@@ -2,7 +2,7 @@
 Using Node.js and the plugin API created by the OpenRCT2 team, OpenRCT2 Restful Api tracks game stats,
 and updates them after each in-game day. 
 ### View Data live [here](https://www.openrct2api.com/)  
-## Setup
+# Setup
 
 Get an api key from [here](https://openRCT2API.com/setup)
 
@@ -41,7 +41,7 @@ This endpoint takes the various park stats. Meant for use by serverWatcher.js:
 POST: /api/parks/
 ```
 ```js
-{name, value, cash, rating, admissions, parkMax, currentGuests, playersOnline, rides, gameDay, gameMonth, gameYear}
+{name, value, cash, rating, admissions, parkMax, currentGuests, playersOnline, rides, gameDay, gameMonth, gameYear, apiToken, public}
 ```
 
 
