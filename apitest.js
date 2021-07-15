@@ -25,6 +25,26 @@ function main() {
             connect();
         });
         context.subscribe('interval.day', function () {
+
+            var rideList = map.rides.map(function (ride) {
+                var price = ride.price,
+                    classification = ride.classification,
+                    name = ride.name,
+                    intensity = ride.intensity,
+                    mode = ride.mode,
+                    excitement = ride.excitement,
+                    status = ride.status,
+                    value = ride.value,
+                    type = ride.type,
+                    totalProfit = ride.totalProfit,
+                    totalCustomers = ride.totalCustomers;
+                var _ride$object = ride.object,
+                    description = _ride$object.description,
+                    capacity = _ride$object.capacity;
+
+                var parsedRide = { price: price, name: name, classification: classification, intensity: intensity, mode: mode, excitement: excitement, status: status, value: value, type: type, totalProfit: totalProfit, totalCustomers: totalCustomers, description: description, capacity: capacity };
+                return parsedRide;
+            });
             socket.write(JSON.stringify({
                 rating: park.rating,
                 cash: park.cash,
@@ -33,7 +53,7 @@ function main() {
                 parkMax: park.suggestedGuestMaximum,
                 currentGuests: park.guests,
                 playersOnline: network.numPlayers,
-                rides: map.rides,
+                rides: rideList,
                 gameDay: date.day,
                 gameMonth: date.month,
                 gameYear: date.year,
